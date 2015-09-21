@@ -1,0 +1,23 @@
+void setup (){
+  background (0,0,0);
+  size (720, 720);
+  frameRate (10);
+}
+
+int x=0;
+int y=720;
+int numberOfBars = 20;
+
+void draw (){
+    if (numberOfBars < width) {
+      noStroke ();
+      fill (0,0,0);
+      rect (numberOfBars, 0, 5, height);
+      noStroke ();
+      fill (255, 255, 255);
+      rect (numberOfBars, random(height), 5, height);
+      numberOfBars += 20;
+    } else {
+      numberOfBars = 20;
+    }
+}
